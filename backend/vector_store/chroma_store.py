@@ -105,6 +105,10 @@ class ChromaVectorStore:
         """Finds past sessions semantically similar to the current query."""
         return self.memory.similarity_search(query, k=k)
 
+    def recall_similar_queries(self, query: str, k: int = 3) -> List[Document]:
+        """Backward-compatible alias for episodic-memory recall."""
+        return self.recall_memories(query, k=k)
+
     # ══════════════════════════════════════════════════════════════
     # USE CASE 3: Tool Registry (MCP)
     # ══════════════════════════════════════════════════════════════
