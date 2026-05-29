@@ -5,7 +5,7 @@ from typing import List, Dict, Any, Optional
 
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
-from backend.llm_config import get_embedding_model
+from backend.vector_store.embeddings import get_embedding_model
 
 COLL_DOCUMENTS = "amia_documents"
 COLL_MEMORY = "amia_call_memory"
