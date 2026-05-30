@@ -46,6 +46,8 @@ class ReasoningAgent:
 
         # Lookup dict: tool name → tool function
         self.tool_map = {t.name: t for t in self.tools}
+        print(f"{self.tool_map}")
+        
 
     def run(self, state: AMIAState) -> dict:
         """
